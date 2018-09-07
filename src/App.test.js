@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 import "../setup";
 
 describe("<App/>", () => {
@@ -32,5 +33,10 @@ describe("<App/>", () => {
 		button.simulate("click");
 		let todostate = wrapper.state("todos");
 		expect(todostate).toHaveLength(1);
+	});
+
+	it("render correctly", () => {
+		const tree = renderer.create(<App />).toJSON();
+		expect(tree).toMatchSnapshot();
 	});
 });

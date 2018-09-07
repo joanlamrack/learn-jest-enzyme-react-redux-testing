@@ -1,3 +1,9 @@
-## moving Setup file to root
+## Snapshot
 
-move the setup file into root directory
+testing flow
+
+testing -> snapshot
+
+snap rendered the component that you, the result becomes the snap shoot **Badum tss**
+
+the snap shoot then can be compared.
