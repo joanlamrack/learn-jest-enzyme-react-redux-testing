@@ -1,11 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { shallow, configure } from "enzyme";
-
-import Adapter from "enzyme-adapter-react-16";
-
-configure({adapter: new Adapter()});
+import { shallow } from "enzyme";
+import "./setup";
 
 it("renders without crashing", () => {
 	const div = document.createElement("div");
@@ -15,5 +12,5 @@ it("renders without crashing", () => {
 
 it("didnt have a state", () => {
 	const wrapper = shallow(<App />);
-	expect(wrapper.state).to.eql(undefined);
+	expect(wrapper.state).not.toEqual(undefined);
 });
