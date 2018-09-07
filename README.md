@@ -1,5 +1,3 @@
-## Setting Up for React Testing 
+## moving Setup file to root
 
-npm install -D enzyme enzyme-adapter-react-16
-
-You are good to go!
+move the setup file into root directory
