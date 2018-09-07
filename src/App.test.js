@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { shallow } from "enzyme";
-import "./setup";
+import "../setup";
 
 describe("<App/>", () => {
 	const wrapper = shallow(<App />);
