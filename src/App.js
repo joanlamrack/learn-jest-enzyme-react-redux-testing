@@ -12,7 +12,7 @@ class App extends Component {
 	}
 
 	addTodos = task => {
-		this.state.push(task);
+		this.state.todos.push(task);
 	};
 	render() {
 		return (
@@ -24,6 +24,7 @@ class App extends Component {
 				<p className="App-intro">
 					To get started, edit <code>src/App.js</code> and save to reload.
 				</p>
+				<button onClick={()=>this.addTodos("Ladi")}>HOI</button>
 			</div>
 		);
 	}

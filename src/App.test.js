@@ -26,4 +26,11 @@ describe("<App/>", () => {
 		let todostate = wrapper.state("todos");
 		expect(todostate).toEqual([]);
 	});
+
+	it("should trigger add todos", () => {
+		let button = wrapper.find("button").at(0);
+		button.simulate("click");
+		let todostate = wrapper.state("todos");
+		expect(todostate).toHaveLength(1);
+	});
 });
